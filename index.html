@@ -2,16 +2,110 @@
 <html>
 
 <head>
-    <title>TEMPLATE</title>
-    
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Cash Register</title>
 
     <link rel="stylesheet" href="./styles/styles.css">
-    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/mainForCash.js"></script>
 </head>
 
 <body>
     
+    <div id="app">
+
+        <div class="client_pocket">
+            <h2>Client pocket:</h2>
+            <div class="cash">
+                <div class="cell">100</div>
+                <div class="cell">20</div>
+                <div class="cell">10</div>
+                <div class="cell">5</div>
+                <div class="cell">1</div>
+                <div class="cell">0.25</div>
+                <div class="cell">0.1</div>
+                <div class="cell">0.05</div>
+                <div class="cell">0.01</div>
+            </div>
+        </div>
+
+        <div class="info">
+            <div class="payment">
+                <label for="payment_field">Payment:</label>
+                <input type="number" name="payment_field" id="payment_field" disabled>
+            </div>
+            <div class="price">
+                <label for="price_field">Price:</label>
+                <input type="number" name="price_field" id="price_field" required>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="button" id="action_button">PERFORM ACTION</div>
+        </div>
+
+        <div class="change">
+
+            <div class="summary">
+                <label for="change_field">Change: </label>
+                <input type="number" name="change_field" id="change_field" disabled>
+            </div>
+
+            <div class="cash">
+                <div class="quality">100</div>
+                <div class="quality">20</div>
+                <div class="quality">10</div>
+                <div class="quality">5</div>
+                <div class="quality">1</div>
+                <div class="quality">0.25</div>
+                <div class="quality">0.1</div>
+                <div class="quality">0.05</div>
+                <div class="quality">0.01</div>
+
+                <div class="quantity" id="chng_100">x0</div>
+                <div class="quantity" id="chng_20">x0</div>
+                <div class="quantity" id="chng_10">x0</div>
+                <div class="quantity" id="chng_5">x0</div>
+                <div class="quantity" id="chng_1">x0</div>
+                <div class="quantity" id="chng_0.25">x0</div>
+                <div class="quantity" id="chng_0.1">x0</div>
+                <div class="quantity" id="chng_0.05">x0</div>
+                <div class="quantity" id="chng_0.01">x0</div>
+            </div>
+        </div>
+
+        <div class="status">
+            <label for="status_field">Operation status: </label>
+            <input type="text" name="status_field" id="status_field" disabled>
+        </div>
+
+        <div class="cash_register">
+            <h2>Cash register:</h2>
+
+            <div class="cash">
+                <div class="quality">100</div>
+                <div class="quality">20</div>
+                <div class="quality">10</div>
+                <div class="quality">5</div>
+                <div class="quality">1</div>
+                <div class="quality">0.25</div>
+                <div class="quality">0.1</div>
+                <div class="quality">0.05</div>
+                <div class="quality">0.01</div>
+
+                <div class="quantity" id="reg_100">x0</div>
+                <div class="quantity" id="reg_20">x0</div>
+                <div class="quantity" id="reg_10">x0</div>
+                <div class="quantity" id="reg_5">x0</div>
+                <div class="quantity" id="reg_1">x0</div>
+                <div class="quantity" id="reg_0.25">x0</div>
+                <div class="quantity" id="reg_0.1">x0</div>
+                <div class="quantity" id="reg_0.05">x0</div>
+                <div class="quantity" id="reg_0.01">x0</div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
