@@ -1,0 +1,53 @@
+/* roboto-regular - latin_cyrillic */
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/roboto-v20-latin_cyrillic-regular.eot'); /* IE9 Compat Modes */
+	src: local('Roboto'), local('Roboto-Regular'),
+		 url('../fonts/roboto-v20-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('../fonts/roboto-v20-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+		 url('../fonts/roboto-v20-latin_cyrillic-regular.woff') format('woff'), /* Modern Browsers */
+		 url('../fonts/roboto-v20-latin_cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+		 url('../fonts/roboto-v20-latin_cyrillic-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
+
+/****************************** COLOR SCHEME - BEGIN ******************************/
+:root {
+	--pure-black: #000000;  /* color: var(--pure-black) */
+	--pure-white: #ffffff;  /* color: var(--pure-white) */
+}
+/****************************** COLOR SCHEME - END ******************************/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+/****************************** @MEDIA - BEGIN ******************************/
+/*	typical checkpoints - DELETE unused		*/
+
+/* Extra small devices (phones, <<<--600px and down) */
+@media only screen and (max-width: 600px) {} 
+
+/* Small devices (portrait tablets and large phones, 601px-->>> and up) */
+@media only screen and (min-width: 601px) {} 
+
+/* Medium devices (landscape tablets, 768px-->>> and up) */
+@media only screen and (min-width: 768px) {} 
+
+/* Large devices (laptops/desktops, 992px-->>> and up) */
+@media only screen and (min-width: 992px) {} 
+
+/* Extra large devices (large laptops and desktops, 1200px-->>> and up) */
+@media only screen and (min-width: 1200px) {}
+/****************************** @MEDIA - END ******************************/
