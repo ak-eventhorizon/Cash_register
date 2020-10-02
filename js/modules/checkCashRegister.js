@@ -1,6 +1,6 @@
 'use strict';
 
-// need to refactor
+// need to refactor (or remove)
 
 function checkCashRegister(price, paymentInCash, changeInDrawer){
 
