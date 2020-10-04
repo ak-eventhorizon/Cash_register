@@ -200,11 +200,3 @@ checkCashRegister();
 //     param2: '',
 //     method1 : console.log('123')
 // };
-
-// const controller = {
-
-// };
-
-// const view = {
-
-// };
