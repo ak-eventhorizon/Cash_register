@@ -1,6 +1,6 @@
 'use strict';
 
-// need to refactor
+// need to refactor - func calculateChange from main.js
 
 function checkCashRegister(price, paymentInCash, changeInDrawer){
 
