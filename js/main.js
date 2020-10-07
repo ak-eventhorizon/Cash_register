@@ -200,5 +200,3 @@ checkCashRegister();
 //     param2: '',
 //     method1 : console.log('123')
 // };
-
-// часть кода уже сверстана нужными для MVC блоками
