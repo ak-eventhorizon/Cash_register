@@ -1,6 +1,7 @@
 'use strict';
 
 // need to refactor - func calculateChange from main.js
+// имеет ли смысл этот отдельный модуль вообще???
 
 function checkCashRegister(price, paymentInCash, changeInDrawer){
 
