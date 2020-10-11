@@ -179,8 +179,6 @@ ui.mainButton.addEventListener('click', () => {
 
 });
 
-
-
 checkCashRegister();
 
 // НА ПОДУМАТЬ: 
