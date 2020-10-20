@@ -1,7 +1,5 @@
 'use strict';
 
-import {checkCashRegister} from './modules/checkCashRegister.js';
-
 /*************** Check Cash Register ***************/
 
 const payment = {
@@ -77,11 +75,13 @@ const register = {
 };
 
 const ui = {
+    // all input fields
     payment: document.querySelector('#payment_field'),
     price: document.querySelector('#price_field'),
     change: document.querySelector('#change_field'),
     status: document.querySelector('#status_field'),
 
+    // clickable elements
     clientButtons: document.querySelectorAll('div.client_pocket > div.cash > div.cell'),
     mainButton: document.querySelector('#action_button'),
 
@@ -178,8 +178,6 @@ ui.mainButton.addEventListener('click', () => {
     calculateChange();
 
 });
-
-checkCashRegister();
 
 // НА ПОДУМАТЬ: 
 // в существующей реализации некоторые элементы интерфейса являюся хранилищем и источником данных
