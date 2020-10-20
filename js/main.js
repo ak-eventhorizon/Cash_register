@@ -74,6 +74,9 @@ const register = {
     }
 };
 
+
+
+
 const ui = {
     // all input fields
     payment: document.querySelector('#payment_field'),
@@ -124,26 +127,39 @@ ui.refreshRegisterCells();
 ui.refreshChangeCells();
 
 
+
+
 // MAIN CALCULATING function
 function calculateChange() {
-    let paymentValue = +parseFloat(ui.payment.value).toFixed(2);
     let priceValue = +parseFloat(ui.price.value).toFixed(2);
-    let neededChange = +(paymentValue - priceValue).toFixed(2);
+    let paymentValue = +parseFloat(ui.payment.value).toFixed(2);
+    let changeNeeded = +(paymentValue - priceValue).toFixed(2);
 
-    if (neededChange === 0) {
+    if (changeNeeded === 0) {
         ui.status.value = "CHANGE DONT NEEDED (0$)";
-    } else if (neededChange < 0){
+    } else if (changeNeeded < 0){
         ui.status.value = "NOT ENOUGH PAYMENT";
     } else {
         ui.status.value = "CHANGE CALCULATED";
-        // тут считается сдача
+        changePickFromSum(changeNeeded);        
     }
 
     console.log(`Payment value: ${paymentValue}`);
     console.log(`Price value: ${priceValue}`);
-    console.log(`Needed Change: ${neededChange}`);
+    console.log(`Change Needed: ${changeNeeded}`);
 }
 
+// тут происходит набор купюр чтобы набрать из содержимого register переданное число
+function changePickFromSum(number) {
+    let currentChange = number;
+
+    
+}
+
+
+
+
+// add event listeners on interface buttons
 
 for (let element of ui.clientButtons) {
     element.addEventListener('click', function () {
@@ -158,25 +174,8 @@ for (let element of ui.clientButtons) {
     });
 }
 
-
-// debugging console info
-// TODO - delete after app complete
 ui.mainButton.addEventListener('click', () => {
-    console.log('Payment:');
-    console.log(payment.content);
-    console.log('PaymentSum:');
-    console.log(payment.sum());
-    console.log('Change:');
-    console.log(change.content);
-    console.log('ChangeSum:');
-    console.log(change.sum());
-    console.log('CashRegister:');
-    console.log(register.content);
-    console.log('CashRegisterSum:');
-    console.log(register.sum());
-
     calculateChange();
-
 });
 
 // НА ПОДУМАТЬ: 
