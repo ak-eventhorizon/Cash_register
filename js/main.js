@@ -85,6 +85,7 @@ const ui = {
     clientButtons: document.querySelectorAll('div.client_pocket > div.cash > div.cell'),
     mainButton: document.querySelector('#action_button'),
 
+    // quantity xNN elements
     changeQuantityCells: document.querySelectorAll('div.change div.quantity'),
     registerQuantityCells: document.querySelectorAll('div.cash_register div.quantity'),
 
@@ -123,22 +124,7 @@ ui.refreshRegisterCells();
 ui.refreshChangeCells();
 
 
-
-for (let element of ui.clientButtons) {
-    element.addEventListener('click', function () {
-        // подсчет и вывод поля Payment
-        let result = parseFloat(ui.payment.value) + parseFloat(element.innerHTML);
-        ui.payment.value = result.toFixed(2);
-
-        // инкремент определенного Map'a из payment.content (плюс одна купюра)
-        let currentQuantity = payment.content.get(+element.innerHTML);
-        payment.content.set(+element.innerHTML, ++currentQuantity);
-    });
-}
-
-
-// main calculate function
-// TODO - эта функция в итоге будет вынесена в отдельный модуль - checkCashRegister
+// MAIN CALCULATING function
 function calculateChange() {
     let paymentValue = +parseFloat(ui.payment.value).toFixed(2);
     let priceValue = +parseFloat(ui.price.value).toFixed(2);
@@ -156,6 +142,20 @@ function calculateChange() {
     console.log(`Payment value: ${paymentValue}`);
     console.log(`Price value: ${priceValue}`);
     console.log(`Needed Change: ${neededChange}`);
+}
+
+
+for (let element of ui.clientButtons) {
+    element.addEventListener('click', function () {
+        
+        // подсчет и вывод поля Payment
+        let result = parseFloat(ui.payment.value) + parseFloat(element.innerHTML);
+        ui.payment.value = result.toFixed(2);
+
+        // инкремент определенного Map'a из payment.content (плюс одна купюра)
+        let currentQuantity = payment.content.get(+element.innerHTML);
+        payment.content.set(+element.innerHTML, ++currentQuantity);
+    });
 }
 
 
