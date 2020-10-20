@@ -152,7 +152,9 @@ function calculateChange() {
 // тут происходит набор купюр чтобы набрать из содержимого register переданное число
 function changePickFromSum(number) {
     let currentChange = number;
+    let changePickPossible = true;
 
+    
     
 }
 
