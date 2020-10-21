@@ -152,7 +152,7 @@ function calculateChange() {
 // тут происходит набор купюр чтобы набрать из содержимого register переданное число
 function changePickFromSum(number) {
     let currentChange = number;
-    let changePickPossible = true;
+    let changePickIsPossible = true;
 
     
     
@@ -194,7 +194,3 @@ ui.mainButton.addEventListener('click', () => {
 // уже готовый объект - ui)
 
 // Controller - интерпретирует действия пользователя, оповещая модель о необходимости изменений
-
-
-
-// совсем не идет... надо с этим что то делать...
