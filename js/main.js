@@ -141,20 +141,33 @@ function calculateChange() {
         ui.status.value = "NOT ENOUGH PAYMENT";
     } else {
         ui.status.value = "CHANGE CALCULATED";
-        changePickFromSum(changeNeeded);        
-    }
+        ui.change.value = changeNeeded.toFixed(2);
 
-    console.log(`Payment value: ${paymentValue}`);
-    console.log(`Price value: ${priceValue}`);
-    console.log(`Change Needed: ${changeNeeded}`);
+        changePickForSum(changeNeeded);        
+    }
 }
 
 // тут происходит набор купюр чтобы набрать из содержимого register переданное число
-function changePickFromSum(number) {
+function changePickForSum(number) {
     let currentChange = number;
     let changePickIsPossible = true;
 
-    
+    //итерирование по map
+    for (let [key,value] of register.content.entries()) {
+        // key - номинал купюры,  value - количество купюр в кассе
+
+        // if (currentChange >= key && value > 0) {
+
+
+            
+        //     currentChange = currentChange - key;
+        //     register.content.set(key, value-1);
+        //     change.content.set(key, change.content.get(key)+1);
+
+        // } else if (currentChange === 0) {
+        //     break;
+        // }
+    }
     
 }
 
