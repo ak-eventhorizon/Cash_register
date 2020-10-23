@@ -77,6 +77,8 @@ const register = {
 
 
 
+
+
 const ui = {
     // all input fields
     payment: document.querySelector('#payment_field'),
@@ -129,6 +131,8 @@ ui.refreshChangeCells();
 
 
 
+
+
 // MAIN CALCULATING function
 function calculateChange() {
     let priceValue = +parseFloat(ui.price.value).toFixed(2);
@@ -167,9 +171,23 @@ function changePickForSum(number) {
         // } else if (currentChange === 0) {
         //     break;
         // }
-    }
-    
+    } 
 }
+
+// перенос одной купюры cashUnit из одной структуры fromMap в другую toMap
+function moveOneCashUnit(fromMap, toMap, cashUnit){
+    let fromValue = fromMap.get(cashUnit);
+    let toValue = toMap.get(cashUnit);
+
+    if (fromValue > 0) {
+        fromMap.set(cashUnit, --fromValue);
+        toMap.set(cashUnit, ++toValue);
+    } else {
+        console.log(`function moveOneCashUnit get 'fromMap' value <= 0`);
+    }
+}
+
+
 
 
 
