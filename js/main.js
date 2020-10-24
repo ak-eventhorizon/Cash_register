@@ -158,7 +158,8 @@ function changePickForSum(number) {
 
     //итерирование по map
     for (let [key,value] of register.content.entries()) {
-        // key - номинал купюры,  value - количество купюр в кассе
+        // key - номинал купюры
+        // value - количество купюр в кассе
 
         // if (currentChange >= key && value > 0) {
 
