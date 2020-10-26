@@ -170,7 +170,7 @@ function changePickForSum(number) {
         //     change.content.set(key, change.content.get(key)+1);
 
         // } else if (currentChange === 0) {
-        //     break; //???
+        //     break;
         // }
     } 
 }
