@@ -160,8 +160,6 @@ function changePickForSum(number) {
     const backupRegisterMap = new Map (register.content);
     const backupChangeMap = new Map (change.content);
 
-
-    
     let currentChange = number;
     let changePickIsPossible = true;
 
