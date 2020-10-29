@@ -167,18 +167,6 @@ function changePickForSum(number) {
     for (let [key,value] of register.content.entries()) {
         // key - номинал купюры
         // value - количество купюр в кассе
-
-        // if (currentChange >= key && value > 0) {
-
-
-            
-        //     currentChange = currentChange - key;
-        //     register.content.set(key, value-1);
-        //     change.content.set(key, change.content.get(key)+1);
-
-        // } else if (currentChange === 0) {
-        //     break;
-        // }
     } 
 }
 
