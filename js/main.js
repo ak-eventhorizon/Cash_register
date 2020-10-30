@@ -164,9 +164,13 @@ function changePickForSum(number) {
     let changePickIsPossible = true;
 
     //итерирование по map
-    for (let [key,value] of register.content.entries()) {
-        // key - номинал купюры
-        // value - количество купюр в кассе
+    for (let [rate,quantity] of register.content.entries()) {
+        // rate - номинал купюры (key)
+        // quantity - количество купюр в кассе (value)
+        console.log(rate, quantity);
+
+        //
+
     } 
 }
 
