@@ -168,9 +168,6 @@ function changePickForSum(number) {
         // rate - номинал купюры (key)
         // quantity - количество купюр в кассе (value)
         console.log(rate, quantity);
-
-        //
-
     } 
 }
 
