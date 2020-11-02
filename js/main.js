@@ -78,7 +78,6 @@ const register = {
 
 
 
-
 const ui = {
     // all input fields
     payment: document.querySelector('#payment_field'),
@@ -127,7 +126,6 @@ ui.resetPrice();
 
 ui.refreshRegisterCells();
 ui.refreshChangeCells();
-
 
 
 
@@ -182,7 +180,6 @@ function moveOneCashUnit(fromMap, toMap, cashUnit){
         console.log(`function moveOneCashUnit get 'fromMap' value <= 0`);
     }
 }
-
 
 
 
