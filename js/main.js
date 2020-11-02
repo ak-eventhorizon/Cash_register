@@ -155,8 +155,7 @@ function calculateChange() {
 function changePickForSum(number) {
 
     // перед началом действий с содержимым кассы и сдачи - делаются копии их исходного
-    // состояния, чтобы можно было их вернуть в случае невозможности завершения
-    // операции
+    // состояния, чтобы можно было их вернуть в случае невозможности завершения операции
     const backupRegisterMap = new Map (register.content);
     const backupChangeMap = new Map (change.content);
 
