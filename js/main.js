@@ -157,8 +157,8 @@ function changePickForSum(number) {
     const backupRegisterMap = new Map (register.content);
     const backupChangeMap = new Map (change.content);
 
-    let currentChange = number;
-    let changePickIsPossible = true;
+    let remainingChange = number;
+    let changePickingIsPossible = true;
 
     //итерирование по map
     for (let [rate,quantity] of register.content.entries()) {
