@@ -164,6 +164,11 @@ function changePickForSum(number) {
     for (let [rate,quantity] of register.content.entries()) {
         // rate - номинал купюры (эквивалент key)
         // quantity - количество купюр в кассе (эквивалент value)
+
+        for (let i = quantity; i > 0; i--) {
+            console.log(`Осталось ${i} купюр номиналом ${rate}`);
+        }
+
         console.log(rate, quantity);
     } 
 }
