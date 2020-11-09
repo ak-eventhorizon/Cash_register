@@ -166,6 +166,7 @@ function changePickForSum(number) {
         // quantity - количество купюр в кассе (эквивалент value)
 
         for (let i = quantity; i > 0; i--) {
+            // logic HERE
             console.log(`Осталось ${i} купюр номиналом ${rate}`);
         }
 
