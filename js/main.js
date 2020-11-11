@@ -142,7 +142,7 @@ function calculateChange() {
     } else if (changeNeeded < 0){
         ui.status.value = "NOT ENOUGH PAYMENT";
     } else {
-        ui.status.value = "CHANGE CALCULATED";
+        ui.status.value = "CHANGE CALCULATED"; //этот статус убрать внутрь функции changePickForSum
         ui.change.value = changeNeeded.toFixed(2);
 
         changePickForSum(changeNeeded);        
