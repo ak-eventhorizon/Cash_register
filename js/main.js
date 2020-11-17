@@ -167,8 +167,6 @@ function changePickForSum(number) {
 
         for (let i = quantity; i > 0; i--) {
             console.log(`Осталось ${i} купюр номиналом ${rate}`);
-
-            // это все делается на листе бумаги
         }
 
         console.log(rate, quantity);
