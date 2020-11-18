@@ -142,9 +142,6 @@ function calculateChange() {
     } else if (changeNeeded < 0){
         ui.status.value = "NOT ENOUGH PAYMENT";
     } else {
-        ui.status.value = "CHANGE CALCULATED"; //этот статус убрать внутрь функции changePickForSum
-        ui.change.value = changeNeeded.toFixed(2);
-
         changePickForSum(changeNeeded);        
     }
 }
@@ -166,7 +163,29 @@ function changePickForSum(number) {
         // quantity - количество купюр в кассе (эквивалент value)
 
         for (let i = quantity; i > 0; i--) {
+            
+            if (remainingChange === 0) {
+                break; // прерывает внутренний цикл
+            } else if ( (remainingChange > rate) && (quantity !== 0)) {
+                
+                moveOneCashUnit(register.content, change.content, rate);
+
+            } else if (rate === 0.01){
+                changePickingIsPossible = false;
+            }
             console.log(`Осталось ${i} купюр номиналом ${rate}`);
+        }
+
+        if (remainingChange === 0) {
+            ui.status.value = "CHANGE CALCULATED";
+            ui.change.value = number.toFixed(2);
+            break; // прерывает внешний цикл
+        } else if (!changePickingIsPossible) {
+            ui.status.value = "IMPOSSIBLE TO PICK CHANGE";
+            //восстановление содержимого из резервных копий
+            register.content = new Map(backupRegisterMap);
+            change.content = new Map (backupChangeMap);
+            break; // прерывает внешний цикл
         }
 
         console.log(rate, quantity);
