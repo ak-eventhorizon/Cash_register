@@ -163,18 +163,18 @@ function changePickForSum(number) {
         // quantity - количество купюр в кассе (эквивалент value)
 
         // ВНУТРЕННИЙ ЦИКЛ (по каждой купюре из определенного номинала)
-        for (let i = quantity; i > 0; i--) {
+        for (let i = quantity; i >= 0; i--) {
             
             if (remainingChange === 0) {
 
                 break; // прерывает внутренний цикл
 
-            } else if ( (remainingChange > rate) && (quantity !== 0)) {
+            } else if ( (remainingChange > rate) && (i !== 0)) {
                 
                 moveOneCashUnit(register.content, change.content, rate);
                 remainingChange = remainingChange - rate;
 
-            } else if ((remainingChange !== 0) && (rate === 0.01) && (quantity === 0)){
+            } else if ((remainingChange !== 0) && (rate === 0.01) && (i === 0)){
                 
                 changePickingIsPossible = false;
                 break;
@@ -182,8 +182,9 @@ function changePickForSum(number) {
             } else {
 
                 break;
-                
+
             }
+            //НУЖНО ТЕСТИРОВАНИЕ АЛГОРИТМА!!
             console.log(`Осталось ${i} купюр номиналом ${rate}`);
         }
 
