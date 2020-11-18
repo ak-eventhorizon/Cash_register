@@ -157,11 +157,12 @@ function changePickForSum(number) {
     let remainingChange = number;
     let changePickingIsPossible = true;
 
-    //итерирование по map
+    // ВНЕШНИЙ ЦИКЛ (по номиналам купюр)
     for (let [rate,quantity] of register.content.entries()) {
         // rate - номинал купюры (эквивалент key)
         // quantity - количество купюр в кассе (эквивалент value)
 
+        // ВНУТРЕННИЙ ЦИКЛ (по каждой купюре из определенного номинала)
         for (let i = quantity; i > 0; i--) {
             
             if (remainingChange === 0) {
@@ -172,6 +173,9 @@ function changePickForSum(number) {
 
             } else if (rate === 0.01){
                 changePickingIsPossible = false;
+                break;
+            } else {
+                break;
             }
             console.log(`Осталось ${i} купюр номиналом ${rate}`);
         }
@@ -181,7 +185,7 @@ function changePickForSum(number) {
             ui.change.value = number.toFixed(2);
             break; // прерывает внешний цикл
         } else if (!changePickingIsPossible) {
-            ui.status.value = "IMPOSSIBLE TO PICK CHANGE";
+            ui.status.value = "NO FUNDS FOR PICK CHANGE";
             //восстановление содержимого из резервных копий
             register.content = new Map(backupRegisterMap);
             change.content = new Map (backupChangeMap);
