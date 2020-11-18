@@ -166,17 +166,23 @@ function changePickForSum(number) {
         for (let i = quantity; i > 0; i--) {
             
             if (remainingChange === 0) {
+
                 break; // прерывает внутренний цикл
+
             } else if ( (remainingChange > rate) && (quantity !== 0)) {
                 
                 moveOneCashUnit(register.content, change.content, rate);
                 remainingChange = remainingChange - rate;
 
-            } else if (rate === 0.01){
+            } else if ((remainingChange !== 0) && (rate === 0.01) && (quantity === 0)){
+                
                 changePickingIsPossible = false;
                 break;
+
             } else {
+
                 break;
+                
             }
             console.log(`Осталось ${i} купюр номиналом ${rate}`);
         }
