@@ -170,6 +170,7 @@ function changePickForSum(number) {
             } else if ( (remainingChange > rate) && (quantity !== 0)) {
                 
                 moveOneCashUnit(register.content, change.content, rate);
+                remainingChange = remainingChange - rate;
 
             } else if (rate === 0.01){
                 changePickingIsPossible = false;
@@ -207,6 +208,9 @@ function moveOneCashUnit(fromMap, toMap, cashUnit){
     } else {
         console.log(`function moveOneCashUnit get 'fromMap' value <= 0`);
     }
+
+    ui.refreshRegisterCells();
+    ui.refreshChangeCells();
 }
 
 
@@ -231,6 +235,9 @@ for (let element of ui.clientButtons) {
 ui.mainButton.addEventListener('click', () => {
     calculateChange();
 });
+
+
+
 
 // НА ПОДУМАТЬ: 
 // в существующей реализации некоторые элементы интерфейса являюся хранилищем и источником данных
