@@ -99,6 +99,9 @@ const ui = {
     resetPrice: function (){
         this.price.value = '0.00';
     },
+    setChange: function (num){
+        this.change.value = num;
+    },
     refreshChangeCells: function(){
         // метод, заполняющий ячейки с количеством купюр change в 
         // соответствии с мапом change
@@ -162,7 +165,7 @@ function changePickForSum(number) {
         // rate - номинал купюры (эквивалент key)
         // quantity - количество купюр в кассе (эквивалент value)
 
-        // ВНУТРЕННИЙ ЦИКЛ (по каждой купюре из определенного номинала)
+        // ВНУТРЕННИЙ ЦИКЛ (по каждой купюре из определенного номинала rate)
         for (let i = quantity; i >= 0; i--) {
             
             if (remainingChange === 0) {
