@@ -193,7 +193,7 @@ function changePickForSum(number) {
 
         if (remainingChange === 0) {
             ui.status.value = "CHANGE CALCULATED";
-            ui.change.value = number.toFixed(2);
+            ui.setChange(change.sum());
             break; // прерывает внешний цикл
         } else if (!changePickingIsPossible) {
             ui.status.value = "NO FUNDS FOR PICK CHANGE";
