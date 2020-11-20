@@ -17,8 +17,8 @@ const payment = {
     sum: function (){
         let result = 0;
     
-        function calculateMapElement(value, key, map){
-            let multiple = key * map.get(key);
+        function calculateMapElement(value, key){
+            let multiple = key * value;
             result += multiple;
         }
         this.content.forEach(calculateMapElement);
@@ -41,8 +41,8 @@ const change = {
     sum: function (){
         let result = 0;
     
-        function calculateMapElement(value, key, map){
-            let multiple = key * map.get(key);
+        function calculateMapElement(value, key){
+            let multiple = key * value;
             result += multiple;
         }
         this.content.forEach(calculateMapElement);
@@ -65,8 +65,8 @@ const register = {
     sum: function (){
         let result = 0;
     
-        function calculateMapElement(value, key, map){
-            let multiple = key * map.get(key);
+        function calculateMapElement(value, key){
+            let multiple = key * value;
             result += multiple;
         }
         this.content.forEach(calculateMapElement);
