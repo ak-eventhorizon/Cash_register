@@ -169,15 +169,18 @@ function changePickForSum(number) {
         for (let i = quantity; i >= 0; i--) {
             
             if (remainingChange === 0) {
+                // если сдача не требуется
 
                 break; // прерывает внутренний цикл
 
             } else if ( (remainingChange > rate) && (i !== 0)) {
+                // если необходимая сдача больше текущей купюры в кассе и такие купюры есть
                 
                 moveOneCashUnit(register.content, change.content, rate);
                 remainingChange = remainingChange - rate;
 
             } else if ((remainingChange !== 0) && (rate === 0.01) && (i === 0)){
+                // если сдача еще нужна, а цикл дошел до самой маленькой купюры и их количество 0
                 
                 changePickingIsPossible = false;
                 break;
@@ -197,9 +200,14 @@ function changePickForSum(number) {
             break; // прерывает внешний цикл
         } else if (!changePickingIsPossible) {
             ui.status.value = "NO FUNDS FOR PICK CHANGE";
+            
             //восстановление содержимого из резервных копий
             register.content = new Map(backupRegisterMap);
             change.content = new Map (backupChangeMap);
+
+            ui.refreshRegisterCells();
+            ui.refreshChangeCells();
+
             break; // прерывает внешний цикл
         }
 
