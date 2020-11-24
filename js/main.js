@@ -205,6 +205,7 @@ function changePickForSum(number) {
             register.content = new Map(backupRegisterMap);
             change.content = new Map (backupChangeMap);
 
+            //обновление состояния интерфейса к исходному
             ui.refreshRegisterCells();
             ui.refreshChangeCells();
 
