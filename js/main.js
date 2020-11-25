@@ -171,7 +171,7 @@ function changePickForSum(number) {
             if (remainingChange === 0) {
                 // если сдача не требуется
 
-                break; // прерывает внутренний цикл
+                break; // прерывает ВНУТРЕННИЙ цикл
 
             } else if ( (remainingChange > rate) && (i !== 0)) {
                 // если необходимая сдача больше текущей купюры в кассе и такие купюры есть
@@ -209,7 +209,7 @@ function changePickForSum(number) {
             ui.refreshRegisterCells();
             ui.refreshChangeCells();
 
-            break; // прерывает внешний цикл
+            break; // прерывает ВНЕШНИЙ цикл
         }
 
         console.log(rate, quantity);
@@ -238,17 +238,21 @@ function moveOneCashUnit(fromMap, toMap, cashUnit){
 
 // add event listeners on interface buttons
 
-for (let element of ui.clientButtons) {
-    element.addEventListener('click', function () {
-        
-        // подсчет и вывод поля Payment
-        let result = parseFloat(ui.payment.value) + parseFloat(element.innerHTML);
-        ui.payment.value = result.toFixed(2);
+function clientPocketButtonAction (event){
+    //номинал купюры с которой имеем дело
+    let cashUnit = +event.target.innerHTML;
 
-        // инкремент определенного Map'a из payment.content (плюс одна купюра)
-        let currentQuantity = payment.content.get(+element.innerHTML);
-        payment.content.set(+element.innerHTML, ++currentQuantity);
-    });
+    // подсчет и вывод поля Payment
+    let result = +payment.sum() + cashUnit;
+    ui.payment.value = result.toFixed(2);
+
+    // инкремент определенного Map'a из payment.content (плюс одна купюра)
+    let currentQuantity = payment.content.get(cashUnit);
+    payment.content.set(cashUnit, ++currentQuantity);
+}
+
+for (let element of ui.clientButtons) {
+    element.addEventListener('click', clientPocketButtonAction);
 }
 
 ui.mainButton.addEventListener('click', () => {
