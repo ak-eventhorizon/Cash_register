@@ -238,7 +238,6 @@ function moveOneCashUnit(fromMap, toMap, cashUnit){
 
 // add event listeners on interface buttons
 
-//Проверить этот блок также
 function clientPocketButtonAction (event){
     //номинал купюры с которой имеем дело
     let cashUnit = +event.target.innerHTML;
