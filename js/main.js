@@ -190,6 +190,7 @@ function changePickForSum(number) {
                 break;
 
             }
+            // TODO
             //НУЖНО ТЕСТИРОВАНИЕ АЛГОРИТМА!!
             console.log(`Осталось ${i} купюр номиналом ${rate}`);
         }
