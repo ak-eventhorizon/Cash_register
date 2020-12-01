@@ -165,7 +165,7 @@ function changePickForSum(number) {
         // rate - номинал купюры (эквивалент key)
         // quantity - количество купюр в кассе (эквивалент value)
 
-        // ВНУТРЕННИЙ ЦИКЛ (по каждой купюре из определенного номинала rate)
+        // ВНУТРЕННИЙ ЦИКЛ (по каждой купюре из номинала rate)
         for (let i = quantity; i >= 0; i--) {
             
             if (remainingChange === 0) {
@@ -192,7 +192,7 @@ function changePickForSum(number) {
             }
             
             //НУЖНО ТЕСТИРОВАНИЕ АЛГОРИТМА!!
-            console.log(`Осталось ${i} купюр номиналом ${rate}`);
+            console.log(`Осталось ${i} купюр номиналом ${rate}`); // удалить после отладки
         }
 
         if (remainingChange === 0) {
