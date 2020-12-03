@@ -213,7 +213,7 @@ function changePickForSum(number) {
             break; // прерывает ВНЕШНИЙ цикл
         }
 
-        console.log(rate, quantity);
+        console.log(rate, quantity); // удалить после отладки
     } 
 }
 
@@ -256,9 +256,7 @@ for (let element of ui.clientButtons) {
     element.addEventListener('click', clientPocketButtonAction);
 }
 
-ui.mainButton.addEventListener('click', () => {
-    calculateChange();
-});
+ui.mainButton.addEventListener('click', calculateChange);
 
 
 
@@ -273,8 +271,7 @@ ui.mainButton.addEventListener('click', () => {
 
 
 
-//TODO: после отладки основного функционала -- 
-// отрефакторить программу по принципу MVC, разнести на модули:
+//TODO: отрефакторить программу по принципу MVC, разнести на модули:
 
 //  main.js -- тут импорты всего, функция init()
 //      model.js -- хранилище состояния и логика программы, без привезки к интерфейсу и событиям
