@@ -270,6 +270,8 @@ ui.mainButton.addEventListener('click', calculateChange);
 // Controller - интерпретирует действия пользователя, оповещая модель о необходимости изменений
 
 
+// model <---> controller <---> view
+
 
 //TODO: отрефакторить программу по принципу MVC, разнести на модули:
 
@@ -277,5 +279,3 @@ ui.mainButton.addEventListener('click', calculateChange);
 //      model.js -- хранилище состояния и логика программы, без привезки к интерфейсу и событиям
 //      view.js -- весь ui c с перегенерацией элементов и отрисовкой всего нужного (export ui.smthn)
 //      controller.js -- все возможные действия пользователя описываются тут (export action.smthn)
-
-// model <---> controller <---> view
