@@ -279,3 +279,6 @@ ui.mainButton.addEventListener('click', calculateChange);
 //      controller.js -- все возможные действия пользователя описываются тут (export action.smthn)
 
 // model <---> controller <---> view
+
+
+// test git console tool
