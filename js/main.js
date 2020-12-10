@@ -1,7 +1,5 @@
 'use strict';
 
-/*************** Check Cash Register ***************/
-
 const payment = {
     content: new Map([
         [100,0],
