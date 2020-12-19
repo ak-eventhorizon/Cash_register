@@ -257,3 +257,4 @@ for (let element of ui.clientButtons) {
 ui.mainButton.addEventListener('click', calculateChange);
 
 // TODO -- MVC structure
+// one more iteration for success!
