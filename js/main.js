@@ -256,5 +256,5 @@ for (let element of ui.clientButtons) {
 
 ui.mainButton.addEventListener('click', calculateChange);
 
-// TODO -- MVC struct
+// TODO -- MVC structure (фалы подготовлены в ./modules)
 // разнести функционал по модулям, в процессе переноса, переделав на парадигму @ts-check и @param
