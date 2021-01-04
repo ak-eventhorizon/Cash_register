@@ -257,5 +257,4 @@ for (let element of ui.clientButtons) {
 ui.mainButton.addEventListener('click', calculateChange);
 
 // TODO -- MVC structure
-// разнести функционал по модулям, в процессе переноса, переделав на парадигму @ts-check и @param
-// (образец в проекте lottery randomizer)
+// разнести функционал по модулям, переделать на парадигму @ts-check и @param (см. lottery random)
