@@ -258,3 +258,5 @@ ui.mainButton.addEventListener('click', calculateChange);
 
 // TODO -- MVC structure
 // разнести функционал по модулям, переделать на парадигму @ts-check и @param
+
+// interview time - 13.01.2021 10-00
