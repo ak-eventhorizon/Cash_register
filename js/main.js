@@ -260,3 +260,4 @@ ui.mainButton.addEventListener('click', calculateChange);
 // разнести функционал по модулям, переделать на парадигму @ts-check и @param
 
 // DIT Mos - in 3 days...
+// Birthday commit!!!
