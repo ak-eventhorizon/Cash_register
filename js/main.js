@@ -260,3 +260,4 @@ ui.mainButton.addEventListener('click', calculateChange);
 // разнести функционал по модулям, переделать на парадигму @ts-check и @param
 
 // суждено ли этот проект вообще завершить?
+// нет!
