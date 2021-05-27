@@ -261,4 +261,3 @@ ui.mainButton.addEventListener('click', calculateChange);
 
 // py-1
 // py-2
-// py-3
