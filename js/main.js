@@ -258,3 +258,14 @@ ui.mainButton.addEventListener('click', calculateChange);
 
 // TODO -- MVC structure
 // разнести функционал по модулям, переделать на парадигму @ts-check и @param
+
+// 6
+// 7 
+// 8
+// 9
+// 10
+// 11
+// 12
+// 13
+// 14
+// 15
