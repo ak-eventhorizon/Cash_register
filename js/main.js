@@ -268,4 +268,3 @@ ui.mainButton.addEventListener('click', calculateChange);
 // 12
 // 13
 // 14
-// 15
