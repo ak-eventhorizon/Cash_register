@@ -260,3 +260,5 @@ ui.mainButton.addEventListener('click', calculateChange);
 // разнести функционал по модулям, переделать на парадигму @ts-check и @param
 
 // new 2022 year commit!!!
+
+// 7-6-5-4-3-2-1-0
