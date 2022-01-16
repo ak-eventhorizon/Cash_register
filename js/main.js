@@ -261,4 +261,4 @@ ui.mainButton.addEventListener('click', calculateChange);
 
 // new 2022 year commit!!!
 
-// 7-6-5-4-3-2
+// 7-6-5-4-3
