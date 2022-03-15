@@ -260,4 +260,4 @@ ui.mainButton.addEventListener('click', calculateChange);
 // разнести функционал по модулям, переделать на парадигму @ts-check и @param
 
 // boiling history period N1 -- 24.02 -- ??.??
-// we will make it!
+// we will make it! soon!! or not...
