@@ -260,4 +260,4 @@ ui.mainButton.addEventListener('click', calculateChange);
 // разнести функционал по модулям, переделать на парадигму @ts-check и @param
 
 // 24.02 -- ??.??
-// 21 more days: 1-2-
+// 21 more days: 1-2-3-
