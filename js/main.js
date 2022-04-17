@@ -261,4 +261,4 @@ ui.mainButton.addEventListener('click', calculateChange);
 
 // 24.02 -- ??.??
 // 21 more days:    1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20-21!
-// i say 21 more!!! 1-2-3-4-5-6-
+// i say 21 more!!! 1-2-3-4-5-6-7-
