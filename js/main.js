@@ -260,4 +260,4 @@ ui.mainButton.addEventListener('click', calculateChange);
 // разнести функционал по модулям, переделать на парадигму @ts-check и @param
 
 // 24.02 -- ??.??
-// 1-2-3-4-5-6-7-
+// 1-2-3-4-5-6-7-8-
