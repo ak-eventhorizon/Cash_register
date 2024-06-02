@@ -263,4 +263,4 @@ ui.mainButton.addEventListener('click', calculateChange);
 // 30.08.23 - WEDDING DAY!!!
 // 2024!!
 // приемка! - 07.04.2024
-// 01
+// 01-02
