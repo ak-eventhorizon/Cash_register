@@ -265,4 +265,5 @@ ui.mainButton.addEventListener('click', calculateChange);
 // приемка! - 07.04.2024
 // 2025!!
 // День победы!!!
+// 2026!!
 // day 1-2-3-4-5-6-7-
