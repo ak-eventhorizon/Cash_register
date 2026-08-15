@@ -266,4 +266,4 @@ ui.mainButton.addEventListener('click', calculateChange);
 // 2025!!
 // День победы!!!
 // 2026!!
-// day 0-1-
+// day 0-1-2-
